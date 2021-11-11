@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="panel.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div class="container-fluid" id="cambia">
+          <div class="row">
+               <div class="col-12">
+                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                         <div class="container-fluid">
+                           <a class="navbar-brand" href="#">
+                             <img src="logo/logo.png" alt="Avatar Logo" style="width: 50px;" class="rounded-pill"> Edier Medina Ramos 
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="logout" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                              <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                            </svg>
+                           </a>
+                         </div>
+                       </nav>
+               </div>
+          </div>
+     </div>
+     <br>
+     <div class="container-fluid">
+          <div class="row" id="bt">
+               <div class="col-4">
+                    <a href="user.html">
+                         <div class="chart-container">
+                              <h3>Usuarios</h3>
+                              <canvas id="myChart"></canvas>
+                              <script src="chart.js"></script><br>
+                              <script>
+                              var ctx = document.getElementById('myChart').getContext('2d');
+                              var chart = new Chart(ctx, {
+                                  type: 'doughnut',
+                                  data:{
+                                   datasets: [{
+                                        data: [30, 70],
+                                        backgroundColor: ['#42a5f5', 'red', 'green','blue','violet'],
+                                        label: 'Comparacion de usuarios'}],
+                                        labels: ['Usuarios Actuales','Usuarios Nuevos',]},
+                                  options: {responsive: true}
+                              });
+                              </script>
+                           </div>
+                    </a>
+               </div>
+
+               <div class="col-4">
+                    <a href="marcasve.html">
+                         <div class="chart-container">
+                              <h3>Marcas</h3>
+                              <canvas id="myChart2"></canvas>
+                              <script src="chart.js"></script>
+                              <script>
+                              var ctx = document.getElementById('myChart2').getContext('2d');
+                              var chart = new Chart(ctx, {
+                                  type: 'doughnut',
+                                  data:{
+                                   datasets: [{
+                                        data: [20, 9, 8, 7, 6],
+                                        backgroundColor: ['#42a5f5', 'red', 'green','blue','violet'],
+                                        label: 'Comparacion de marcas'}],
+                                        labels: ['Addidas','Nike','Reebok','Puma','Under Armour']},
+                                  options: {responsive: true}
+                              });
+                              </script>
+                           </div>
+                    </a>
+               </div>
+
+               <div class="col-4">
+                    <a href="producve.html">
+                         <div class="chart-container">
+                              <h3>Productos</h3>
+                              <canvas id="myChart3"></canvas>
+                              <script src="chart.js"></script>
+                              <script>
+                              var ctx = document.getElementById('myChart3').getContext('2d');
+                              var chart = new Chart(ctx, {
+                                  type: 'doughnut',
+                                  data:{
+                                   datasets: [{
+                                        data: [50, 20, 5, 4, 2],
+                                        backgroundColor: ['#42a5f5', 'red', 'green','blue','violet'],
+                                        label: 'Comparacion de productos'}],
+                                        labels: ['Zapatos','Playeras','Mochila','Accesorios','Gorras']},
+                                  options: {responsive: true}
+                              });
+                              </script>
+                           </div>
+                    </a>
+               </div>
+          </div>
+     </div>
+     <br><br><br><br><br><br><br><br><br><br><br><br>
+     <div class="container-fluid">
+          <div class="row">
+               <div class="col-12">
+                    <div class="chart-container2">
+                         <canvas id="myChart4"></canvas>
+                    </div>
+                    <script>
+                         var ctxz = document.getElementById("myChart4").getContext('2d');
+                         var myChart = new Chart(ctxz, {
+                              type: 'line',
+                              data: {
+                                   labels: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre"],
+                                   datasets: [{
+                                        label: 'Ingresos', // Name the series
+                                        data: [500,	50,	2424,	14040,	14141,	4111,	4544,	47,	5555, 6811], // Specify the data values array
+                                        fill: false,
+                                        borderColor: '#2196f3', // Add custom color border (Line)
+                                        backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                                        borderWidth: 1 // Specify bar border width
+                                   }]},
+                                   options: {
+                                        responsive: true, // Instruct chart js to respond nicely.
+                                        maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+                                   }
+                              });
+                    </script>
+               </div>
+          </div>
+     </div>
+     <br>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
