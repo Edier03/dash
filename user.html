@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="https://img.icons8.com/pastel-glyph/64/000000/user-male-circle.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    <div class="container-fluid" id="cambia">
+        <div class="row">
+             <div class="col-12">
+                  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                       <div class="container-fluid">
+                         <a class="navbar-brand" href="#">
+                           <img src="logo/logo.png" alt="Avatar Logo" style="width: 50px;" class="rounded-pill"> Edier Medina Ramos 
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="logout" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                          </svg>
+                          <button type="button" class="btn btn-primary">Usuarios : 570</button>
+                          <button type="button" class="btn btn-primary">Activos : 171</button>
+                         </a>
+                       </div>
+                     </nav>
+             </div>
+        </div>
+   </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+                      <div class="gr_butones" style="margin-left: 50px;">
+                        <a href="user.html"><button type="button" class="btn btn-outline-primary">Usuarios</button></a>
+                        <a href="marcasve.html"><button type="button" class="btn btn-outline-warning">Marcas</button></a>
+                        <a href="producve.html"><button type="button" class="btn btn-outline-success">Productos</button></a>
+                      </div>
+                    </ol>
+                  </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                     <div class="chart-container">
+                         <br>
+                          <h3>Usuarios %</h3>
+                          <br><br>
+                          <canvas id="myChart"></canvas>
+                          <script src="chart.js"></script><br>
+                          <script>
+                          var ctx = document.getElementById('myChart').getContext('2d');
+                          var chart = new Chart(ctx, {
+                              type: 'doughnut',
+                              data:{
+                               datasets: [{
+                                    data: [30, 70, 20],
+                                    backgroundColor: ['#42a5f5', 'red', 'green','blue','violet'],
+                                    label: 'Comparacion de usuarios'}],
+                                    labels: ['Usuarios Actuales','Usuarios Nuevos', 'Usuarios Activos']},
+                              options: {responsive: true}
+                          });
+                          </script>
+                       </div>
+           </div>
+           <div class="col-9">
+               <div class="chart-container">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Telefonos</th>
+                          <th scope="col">Sexo</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Marcos<span id="n_compras" class="badge badge-light">4</span></td>
+                        <td>Díaz</td>
+                        <td>21</td>
+                        <td>9712245689</td>
+                        <td>Hombre</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png"class="borrar" value="Eliminar"  width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jose<span id="n_compras" class="badge badge-light">1</span></td>
+                        <td>Ruiz</td>
+                        <td>45</td>
+                        <td>9661280455</td>
+                        <td>Hombre</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png"class="borrar" value="Eliminar"  width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <tr id="uno">
+                        <th scope="row">3</th>
+                        <td>Larry<span id="n_compras" class="badge badge-light">5</span></td>
+                        <td>Medina</td>
+                        <td>38</td>
+                        <td>9718576895</td>
+                        <td>Hombre</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png" class="borrar" value="Eliminar" width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <script>
+                          $(document).on('click', '.borrar', function (event) {
+    event.preventDefault();
+    $(this).closest('tr').remove();
+});
+                      </script>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Lucas<span id="n_compras" class="badge badge-light">8</span></td>
+                        <td>López</td>
+                        <td>19</td>
+                        <td>9941132250</td>
+                        <td>Hombre</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png" class="borrar" value="Eliminar" width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Maria<span id="n_compras" class="badge badge-light">15</span></td>
+                        <td>Ballesteros</td>
+                        <td>25</td>
+                        <td>9661280366</td>
+                        <td>Mujer</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png" class="borrar" value="Eliminar" width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>Lucy<span id="n_compras" class="badge badge-light">11</span></td>
+                        <td>Luna</td>
+                        <td>23</td>
+                        <td>9714568975</td>
+                        <td>Mujer</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png" class="borrar" value="Eliminar" width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>Ana<span id="n_compras" class="badge badge-light">51</span></td>
+                        <td>Arreola</td>
+                        <td>18</td>
+                        <td>9661984657</td>
+                        <td>Mujer</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/green-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png" class="borrar" value="Eliminar" width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>Elda<span id="n_compras" class="badge badge-light">3</span></td>
+                        <td>Castillo</td>
+                        <td>27</td>
+                        <td>9712431586</td>
+                        <td>Mujer</td>
+                        <td>
+                            <img src="https://img.icons8.com/emoji/48/000000/red-circle-emoji.png" width="10px"/>
+                            <img src="https://img.icons8.com/color/48/000000/trash--v2.png" class="borrar" value="Eliminar" width="20px" class="td_icon"/>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                 
+               </div>
+           </div>
+        </div>
+    </div>
+    <br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-9">
+            <div class="chart-container2">
+                <br>
+                <canvas id="bar-chart" width="300" height="130" style=" display: block; "></canvas>
+            </div>
+        </div>
+        <script>
+            var bar_ctx = document.getElementById('bar-chart').getContext('2d');
+
+var purple_orange_gradient = bar_ctx.createLinearGradient(0, 0, 0, 600);
+purple_orange_gradient.addColorStop(0, 'orange');
+purple_orange_gradient.addColorStop(1, 'purple');
+
+var bar_chart = new Chart(bar_ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+        datasets: [{
+            label: 'Usuarios registrados por mes',
+            data: [10, 28, 30, 40, 45, 50, 55, 60, 64, 70, 55, 64],
+						backgroundColor: purple_orange_gradient,
+						hoverBackgroundColor: purple_orange_gradient,
+						hoverBorderWidth: 2,
+						hoverBorderColor: 'purple'
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+        </script>
+        <div class="col-3">
+            <div class="chart-container">
+                <h3>Sexo</h3>
+                          <br><br>
+                          <canvas id="myChart2"></canvas>
+                          <script src="chart.js"></script><br>
+                          <script>
+                          var ctx = document.getElementById('myChart2').getContext('2d');
+                          var chart = new Chart(ctx, {
+                              type: 'doughnut',
+                              data:{
+                               datasets: [{
+                                    data: [70, 30],
+                                    backgroundColor: ['violet','blue'],
+                                    label: 'Comparacion de usuarios'}],
+                                    labels: ['Mujeres', 'Hombres']},
+                              options: {responsive: true}
+                          });
+                          </script>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<br><br>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

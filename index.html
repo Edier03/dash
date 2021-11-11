@@ -104,17 +104,20 @@
      <div class="container-fluid">
           <div class="row">
                <div class="col-12">
-                    <div class="chart-container2">
-                         <canvas id="myChart4"></canvas>
-                    </div>
+                    <a href="ingresos.html">
+                         
+                         <div class="chart-container2">
+                              <canvas id="ingresos" height="350px"></canvas>
+                         </div>
+                    </a>
                     <script>
-                         var ctxz = document.getElementById("myChart4").getContext('2d');
+                         var ctxz = document.getElementById("ingresos").getContext('2d');
                          var myChart = new Chart(ctxz, {
                               type: 'line',
                               data: {
                                    labels: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre"],
                                    datasets: [{
-                                        label: 'Ingresos', // Name the series
+                                        label: 'Ingresos $MXN', // Name the series
                                         data: [500,	50,	2424,	14040,	14141,	4111,	4544,	47,	5555, 6811], // Specify the data values array
                                         fill: false,
                                         borderColor: '#2196f3', // Add custom color border (Line)
@@ -131,6 +134,118 @@
           </div>
      </div>
      <br>
+     <div class="container-fluid">
+          <div class="row">
+               <div class="col-12">
+                    <!--<div class="chart-container">-->
+                         <br></br>
+                         <center>
+                              <div id="anychart-embed-ZuzzPfLi" class="anychart-embed anychart-embed-ZuzzPfLi">
+                                   <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+                                   <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+                                   <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+                                   <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+                                   <script src="https://cdn.anychart.com/releases/v8/geodata/countries/mexico/mexico.js"></script>
+                                   <script src="https://cdn.anychart.com/releases/v8/themes/dark_blue.js"></script>
+                                   <div id="ac_style_ZuzzPfLi" style="display:none;">
+                                   html, body, #container {
+                                       width: 100%;
+                                       height: 100%;
+                                       margin: 0;
+                                       padding: 0;
+                                   }
+                                   </div>
+                                   <script>(function(){
+                                   function ac_add_to_head(el){
+                                        var head = document.getElementsByTagName('head')[0];
+                                        head.insertBefore(el,head.firstChild);
+                                   }
+                                   function ac_add_link(url){
+                                        var el = document.createElement('link');
+                                        el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+                                        ac_add_to_head(el);
+                                   }
+                                   function ac_add_style(css){
+                                        var ac_style = document.createElement('style');
+                                        if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+                                        else ac_style.appendChild(document.createTextNode(css));
+                                        ac_add_to_head(ac_style);
+                                   }
+                                   ac_add_link('https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css');
+                                   ac_add_style(document.getElementById("ac_style_ZuzzPfLi").innerHTML);
+                                   ac_add_style(".anychart-embed-ZuzzPfLi{width:600px;height:450px;}");
+                                   })();</script>
+                                   <div id="container"> 
+                                   </div>
+                                   <script>
+                                   anychart.onDocumentReady(function() {
+                                       // create map
+                                       map = anychart.map();
+                                   
+                                       // create data set
+                                       var dataSet = anychart.data.set([
+                                             {'id': 'MX.3622', 'value': 0},
+                                             {'id': 'MX.BN', 'value': 1},
+                                             {'id': 'MX.BS', 'value': 2},
+                                             {'id': 'MX.CA', 'value': 3},
+                                             {'id': 'MX.CH', 'value': 4},
+                                             {'id': 'MX.DU', 'value': 5},
+                                             {'id': 'MX.SI', 'value': 6},
+                                             {'id': 'MX.SO', 'value': 7},
+                                             {'id': 'MX.ZA', 'value': 8},
+                                             {'id': 'MX.NL', 'value': 9},
+                                             {'id': 'MX.SL', 'value': 10},
+                                             {'id': 'MX.TM', 'value': 11},
+                                             {'id': 'MX.AG', 'value': 12},
+                                             {'id': 'MX.CL', 'value': 13},
+                                             {'id': 'MX.JA', 'value': 14},
+                                             {'id': 'MX.MC', 'value': 15},
+                                             {'id': 'MX.NA', 'value': 16},
+                                             {'id': 'MX.CM', 'value': 17},
+                                             {'id': 'MX.OA', 'value': 18},
+                                             {'id': 'MX.PU', 'value': 19},
+                                             {'id': 'MX.TB', 'value': 20},
+                                             {'id': 'MX.TL', 'value': 21},
+                                             {'id': 'MX.DF', 'value': 22},
+                                             {'id': 'MX.GJ', 'value': 23},
+                                             {'id': 'MX.GR', 'value': 24},
+                                             {'id': 'MX.HI', 'value': 25},
+                                             {'id': 'MX.MX', 'value': 26},
+                                             {'id': 'MX.MR', 'value': 27},
+                                             {'id': 'MX.QE', 'value': 28},
+                                             {'id': 'MX.VE', 'value': 29},
+                                             {'id': 'MX.CP', 'value': 30},
+                                             {'id': 'MX.QR', 'value': 31},
+                                             {'id': 'MX.YU', 'value': 32}
+                                       ]);
+                                   
+                                       // create choropleth series
+                                       series = map.choropleth(dataSet);
+                                   
+                                       // set geoIdField to 'id', this field contains in geo data meta properties
+                                       series.geoIdField('id');
+                                   
+                                       // set map color settings
+                                       series.colorScale(anychart.scales.linearColor('#deebf7', '#3182bd'));
+                                       series.hovered().fill('#addd8e');
+                                   
+                                       // set geo data, you can find this map in our geo maps collection
+                                       // https://cdn.anychart.com/#maps-collection
+                                       map.geoData(anychart.maps['mexico']);
+                                   
+                                       //set map container id (div)
+                                       map.container('container');
+                                   
+                                       //initiate map drawing
+                                       map.draw();
+                                   });
+                                   </script>
+                                   </div>
+                         </center>
+                    </div>
+               </div>
+          </div>
+     </div>
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

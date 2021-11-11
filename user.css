@@ -1,0 +1,52 @@
+.col-4{
+    /*background-color: black;*/
+    height: 200px;
+}
+.chart-container {
+    height: 465px;
+    background-color: rgb(31, 55, 73);
+    border-radius: 20px;
+}
+.chart-container2{
+    height: 465px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+h3{
+    text-align: center;
+    color: white !important;
+}
+.breadcrumb{
+    background-color: rgb(31, 55, 73) !important;
+}
+.logout{
+    margin-left: 50px;
+}
+body{
+    background: rgb(52, 89, 118) !important;
+}
+.thead-dark{
+    background: white !important;
+}
+th, td{
+    color: white !important;
+}
+.borrar{
+    cursor: pointer;
+}
+.td_icon:hover{
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+#n_compras{
+    margin-left: 5px !important;
+    background: yellow !important;
+}
+td {
+    opacity: 1;
+    -webkit-transition: opacity 1000ms linear;
+    transition: opacity 1000ms linear;
+}
+button{
+    height: 35px;
+}
